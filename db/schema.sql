@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS sick_blog;
+
+CREATE DATABASE sick_blog;

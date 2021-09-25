@@ -1,0 +1,20 @@
+{{#if message}}
+  <div class="error">
+    {{message}}
+  </div>
+{{/if}}
+{{#unless user}}
+  <form action="/login" method="post">
+    <fieldset>
+      <legend>Login Form</legend>
+      <label for="username">Username</label>
+      <input name="username" id="username" type="text" />
+      <label for="password">password</label>
+      <input name="password" id="password" type="password" />
+      <input type="submit" value="Log in" />
+    </fieldset>
+  </form>
+
+{{else}}
+  <h1>You are already logged in {{user.username}} </h1>
+{{/unless}}
